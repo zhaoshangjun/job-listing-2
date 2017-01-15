@@ -8,7 +8,7 @@ class JobsController < ApplicationController
 
   def index
     flash[:notice] = "觉得这个招聘网站做得不错的话，就投我一票吧 : )"
-    @jobs=Job.all
+    @jobs=Job.where(:is_hidden => false).order("created_at DESC")
 
   end
 
@@ -53,7 +53,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email,:is_hidden)
 
   end
 
