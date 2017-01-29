@@ -19,3 +19,123 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+.jumbotron {
+  background-image:url('http://img01.sogoucdn.com/app/a/100540002/734132.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+    color: white;
+}
+
+.title {
+  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+  text-align: left;
+  margin-top: 200px;
+  margin-bottom: 80px;
+
+}
+
+.slogan {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: left;
+  color: white;
+  top: 12px;
+}
+
+.lead {
+  margin-bottom: 60px;
+  text-align: left;
+  color: white;
+}
+
+.custab{
+  border: 1px solid #ccc;
+
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+
+
+/*以下是jobs_view的css*/
+
+.bs-calltoaction{
+    position: relative;
+    width:auto;
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.bs-calltoaction > .row{
+    display:table;
+    width: calc(100% + 30px);
+}
+
+.bs-calltoaction > .row > [class^="col-"],
+.bs-calltoaction > .row > [class*=" col-"]{
+    float:none;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.cta-contents{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cta-title{
+    margin: 0 auto 15px;
+    padding: 0;
+}
+
+.cta-desc{
+    padding: 0;
+}
+
+.cta-desc p:last-child{
+    margin-bottom: 0;
+}
+
+.cta-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 991px){
+  .bs-calltoaction > .row{
+      display:block;
+      width: auto;
+  }
+
+  .bs-calltoaction > .row > [class^="col-"],
+  .bs-calltoaction > .row > [class*=" col-"]{
+      float:none;
+      display:block;
+      vertical-align:middle;
+      position: relative;
+  }
+
+  .cta-contents{
+      text-align: center;
+  }
+}
+.bs-calltoaction.bs-calltoaction-primary{
+    color: #fff;
+    background-color: #000000;
+    border-color: #666666;
+}
+.bs-calltoaction.bs-calltoaction-primary .cta-button .btn{
+    border-color:white;
+}

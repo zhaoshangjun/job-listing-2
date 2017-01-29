@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <h3 class="panel-title">
-          <%= resume.user.email %>
+          应聘者：<%= resume.user.email %>
         </h3>
       </div>
     </div>
@@ -11,6 +11,7 @@
 
   <div class="panel-body">
     <div class="trix-content">
+      <p><b>简介:</b></p>
       <p><%= simple_format(resume.content) %></p>
     </div>
 

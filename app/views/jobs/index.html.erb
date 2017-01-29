@@ -20,7 +20,7 @@
   </ul>
 </div>
 
-
+<!--
 <table class="table table-boldered">
   <thead>
     <tr>
@@ -30,6 +30,7 @@
       <td>刊登时间</td>
     </tr>
   </thead>
+
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
@@ -49,3 +50,28 @@
     <% end %>
   </tbody>
 </table>
+-->
+
+<div class="container">
+    <div class="col-sm-12">
+    <% @jobs.each do |job| %>
+    <div class="bs-calltoaction bs-calltoaction-primary">
+        <div class="row">
+            <div class="col-md-9 cta-contents">
+                <h1 class="cta-title"><%= link_to(job.title, job_path(job))  %></h1>
+                <hr />
+                <div class="cta-desc">
+                    <p>薪资：<%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>美元.</p>
+                    <p>工作地点：斯塔克大厦.</p>
+                    <p>发布时间：<%= job.created_at %>.</p>
+                </div>
+            </div>
+            <div class="col-md-3 cta-button">
+              <%= link_to("查看详情", job_path(job), :class => "btn btn-lg btn-block btn-primary")%>
+            </div>
+         </div>
+    </div>
+
+    <% end %>
+  </div>
+</div>

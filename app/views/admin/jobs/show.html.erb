@@ -1,5 +1,47 @@
+<!--原来的代码
 <h1><%= @job.title %></h1>
 
 <p>
   <%= simple_format(@job.description)%>
 </p>
+<div class="pull-right">
+  <%= link_to("返回", jobs_path, :class => "btn btn-default" ) %>
+</div>
+
+<h1><%= @job.title %></h1>
+
+<p>
+  <%= simple_format(@job.description) %>
+</p>
+<div class="text-center">
+  <%= link_to("提交简历", new_job_resume_path(@job), :style => "font-size: 30px;text-decoration:underline;") %>
+</div>
+-->
+
+<div class="container">
+    <div class="col-sm-11">
+
+    <div class="bs-calltoaction bs-calltoaction-primary">
+        <div class="row">
+            <div class="col-md-11 cta-contents">
+                <h1 class="cta-title"><%= @job.title %></h1>
+                <hr />
+                <div class="cta-desc">
+                    <p>薪资：<%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %>美元.</p>
+
+                    <p>发布时间：<%= @job.created_at %>.</p>
+                    <p>职位介绍：</p>
+                    <p><%= simple_format(@job.description) %></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 cta-button">
+              <%= link_to("返回", jobs_path, :class => "btn btn-lg btn-block btn-primary")%>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
